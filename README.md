@@ -19,13 +19,13 @@ For scanning your project you can use another docker ```newtmitch/sonar-scanner`
 ## Example
 
 ```dockerfile
-docker run --net dockersonarqube_sonarnet -ti -v $(pwd):/root/src --link dockersonarqube_sonarqube_1 newtmitch/sonar-scanner sonar-scanner \ 
+docker run --net dockersonarqube_sonarnet -ti -v $(pwd):/root/src --link dockersonarqube_sonarqube_1 newtmitch/sonar-scanner sonar-scanner \
   -Dsonar.host.url=http://sonarqube:9000 \
   -Dsonar.jdbc.url=jdbc:h2:tcp://sonarqube/sonar \
-  -Dsonar.projectKey="keyProject" \
-  -Dsonar.projectName="nameProject" \
+  -Dsonar.projectKey=MyProjectKey \
+  -Dsonar.projectName="My Project Name" \
   -Dsonar.projectVersion=1 \
-  -Dsonar.projectBaseDir=/root/ \
+  -Dsonar.projectBaseDir=/root \
   -Dsonar.sources=./src
 ```
 
