@@ -9,6 +9,9 @@ docker-compose -f sonar.yml up --build
 
 After that command sonar will be available on ```localhost:9000```
 
+If not up to date run ```localhost:9000/setup``
+
+
 # Sonar scanner
 
 For scanning your project you can use another docker ```newtmitch/sonar-scanner```
